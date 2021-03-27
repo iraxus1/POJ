@@ -43,7 +43,7 @@ public class ZAD2_3_v2 {
                 suma += tab1[i][j] + tab2[i][j];
             }
         }
-        System.out.println("ZADANIE TRZECIE");
+        System.out.println("ZADANIE 3");
         System.out.println("Suma obu macierzy wynosi: " + suma);
     }
 }

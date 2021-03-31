@@ -1,10 +1,12 @@
 package pl.edu.pja;
 
 public class Kwadrat {
-    private int bok;
-    public Kwadrat(int bok){
-        this.bok = bok;
+    public int bok;
+
+    public Kwadrat(int a) {
+        this.bok = a;
     }
+
     public int getPole(){
         return (int) Math.pow(bok, 2);
     }

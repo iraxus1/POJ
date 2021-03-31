@@ -13,7 +13,7 @@ public class Main3 {
         Points c2 = new Points(rand.nextInt(10),rand.nextInt(10));
         System.out.println(c2.Location());
         
-        System.out.println(c1.Length(c2.xValue(),c2.yValue()));
+        System.out.println(c1.Length(c2.getx(),c2.gety()));
     }
 }
 

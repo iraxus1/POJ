@@ -7,18 +7,20 @@ public class Points {
         this.x = x;
         this.y = y;
     }
-    public int xValue(){
-        return this.x;
+    public int getx() {
+        return x;
     }
-    public int yValue(){
-        return this.y;
+
+    public int gety() {
+        return y;
     }
+
     public double Length(int x2, int y2){
-        double odleglosc = Math.sqrt(Math.pow((double)this.x - (double)x2, 2) + Math.pow((double)this.y - (double)y2, 2));
+        double odleglosc = Math.sqrt(Math.pow((double)x - (double)x2, 2) + Math.pow((double)y - (double)y2, 2));
         return odleglosc;
     }
     String Location(){
-        return("X:" + this.xValue() +"\n" + "Y:" + this.yValue());
+        return("X:" + getx() +"\n" + "Y:" + gety());
     }
 }
 

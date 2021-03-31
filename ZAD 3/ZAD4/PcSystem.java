@@ -1,7 +1,7 @@
 package pl.edu.pja;
 
 public enum PcSystem {
-    MAC_OS("Big siur"),
+    MAC_OS("Big sur"),
     WINDOWS("10"),
     LINUX("Kali");
 

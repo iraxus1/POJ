@@ -35,27 +35,27 @@ public class IDK {
                         koniec1 += odleglosc1;
                         koniec2 += odleglosc2;
                         koniec3 += odleglosc3;
-                    }while(koniec1 < 50 || koniec2 < 50 || koniec3 < 50);
-                    if (koniec1 > 100)
+                    }while(koniec1 > 60 || koniec2 > 60 || koniec3 > 60);
+                    if (koniec1 > 50)
                     {
                         System.out.println("Wygrywa Robert");
                         exit = false;
                         break;
                     }
-                    if (koniec2 > 100)
+                    if (koniec2 > 50)
                     {
                         System.out.println("Wygrywa Damian");
                         exit = false;
                         break;
                     }
-                    if (koniec3 > 100)
+                    if (koniec3 > 50)
                     {
                         System.out.println("Wygrywa Adam");
                         exit = false;
                         break;
                     }
                     System.out.println("Mecz");
-                    System.out.println((koniec1-50) + " " + (koniec2-50) + " " + (koniec3-50));
+                    System.out.println((koniec1) + " " + (koniec2) + " " + (koniec3));
                     break;
                 }
                 case 2: {

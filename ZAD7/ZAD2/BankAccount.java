@@ -1,0 +1,41 @@
+package pl.edu.pja;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+public class BankAccount {
+    private static final String EMPTY = "";
+    private static final String MINUS = "-";
+    private double balance;
+    public BankAccount(final double initialBalance)
+    {
+        balance = BigDecimal.valueOf(initialBalance).setScale(2, RoundingMode.HALF_UP).doubleValue();
+        printBalance();
+    }
+    public void transaction(final String value) throws Exception
+    {
+        try {
+            if (value.startsWith(MINUS)) {
+                withdraw(value.replaceFirst(MINUS, EMPTY));
+            } else {
+                deposit(value);
+            }
+        }catch(NumberFormatException e)
+        {
+            System.out.println("Enter correct value");
+        }
+    }
+    private void deposit(final String depositAmount)
+    {
+        balance += Double.parseDouble(depositAmount);
+        printBalance();
+    }
+    private void withdraw(final String withdrawAmount)
+    {
+        balance -= Double.parseDouble(withdrawAmount);
+        printBalance();
+    }
+    private void printBalance()
+    {
+        System.out.println("Account has a balance of " + balance);
+    }
+}

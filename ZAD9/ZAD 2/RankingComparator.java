@@ -1,0 +1,10 @@
+package pl.edu.pja;
+
+import java.util.Comparator;
+
+public class RankingComparator implements Comparator<Player> {
+    @Override
+    public int compare(Player o1, Player o2) {
+        return o1.ranking.compareTo(o2.ranking);
+    }
+}

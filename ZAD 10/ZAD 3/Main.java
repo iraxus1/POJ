@@ -14,5 +14,6 @@ public class Main {
         System.out.println("Srednia ocen z przedmiotu [B]: " + student.getAvgGrade("B"));
         System.out.println("Srednia ocen z przedmiotu [C]: " + student.getAvgGrade("C"));
         System.out.println("Srednia ocen z przedmiotu [D]: " + student.getAvgGrade("D"));
+        System.out.println("Srednia ocen z przedmiotu [E](nie ma takiego): " + student.getAvgGrade("E"));
     }
 }

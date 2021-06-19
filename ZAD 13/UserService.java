@@ -23,11 +23,11 @@ public class UserService {
     }
 
     public static String getNamesAndSurnamesCommaSeparatedOfAllUsersAbove18(List<User> users) {
-        return users.stream().filter(user -> user.getPersonDetails().getAge() > 18).map(user -> user.getName() + " " + user.getPersonDetails().getSurname()).collect(Collectors.joining(","));
+        return users.stream().filter(user -> user.getPersonDetails().getAge() > 18).map(Person -> Person.getName() + " " + Person.getPersonDetails().getSurname()).collect(Collectors.joining(","));
     }
 
     public static List<String> getSortedPermissionsOfUsersWithNameStartingWithA(List<User> users) {
-        return users.stream().filter(user -> user.getName().startsWith("A")).map(User::getPersonDetails).map(Person::getRole).map(Role::getPermissions).flatMap(Collection::stream).map(Permission::getName).sorted().collect(Collectors.toList());
+        return users.stream().filter(user -> user.getName().startsWith("A")).map(user -> user.getPersonDetails().getRole().getPermissions()).flatMap(Collection::stream).map(Permission::getName).sorted().collect(Collectors.toList());
     }
 
     public static void printCapitalizedPermissionNamesOfUsersWithSurnameStartingWithS(List<User> users) {
